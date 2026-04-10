@@ -34,7 +34,7 @@ The network utilizes a **Router-on-a-Stick** configuration. A single physical li
 | **Admin / IT** | 10 | `192.168.1.0/26` | `192.168.1.1` |
 | **Finance / HR** | 20 | `192.168.1.64/26` | `192.168.1.65` |
 | **CS / Reception** | 30 | `192.168.1.128/26` | `192.168.1.129` |
-| **Management (Native)** | 99 | `192.168.1.192/26` | `192.168.1.193` |
+
 
 ---
 
