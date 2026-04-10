@@ -1,66 +1,59 @@
-# bonalbo-branch-network-vlan-design
-A simulated enterprise branch network designed in Cisco Packet Tracer featuring VLAN segmentation for three departments, DHCP for automatic IP addressing, wireless LAN connectivity, and inter-VLAN routing to enable seamless communication across all departments.
 
-📡 VLAN-Based Branch Network Design (Cisco Packet Tracer)
-🚀 Project Overview
+# 🌐 Bonalbo Branch Network Design
+### **Enterprise-Grade VLAN Segmentation & Inter-VLAN Routing**
 
-This project presents a simulated branch network design for a growing company using Cisco Packet Tracer. The network is built to operate independently from the headquarters and is designed to support multiple departments with secure and efficient communication.
+[![Cisco Packet Tracer](https://img.shields.io/badge/Lab-Cisco%20Packet%20Tracer-blue?style=flat-square&logo=cisco)](https://www.netacad.com/)
+[![Networking](https://img.shields.io/badge/Focus-Network%20Infrastructure-green?style=flat-square)](https://www.cisco.com)
 
-The design includes VLAN segmentation, DHCP services, wireless connectivity, and inter-VLAN routing, ensuring scalable and organized network communication.
+## 🚀 Project Overview
+This project presents a simulated branch network design for **XYZ Company’s expansion in Bonalbo**, developed using **Cisco Packet Tracer**. The architecture transitions the branch from a flat network to a modern, segmented infrastructure to improve security, manageability, and performance.
 
-🏢 Scenario
+The design focuses on **VLAN isolation**, **Router-on-a-Stick (RoaS) routing**, and **automated IP management** to ensure a professional, scalable environment.
 
-XYZ Company is expanding its operations by opening a new branch in Bonalbo. The branch requires a structured network to support different departments while maintaining internal communication and efficient IP management.
+---
 
-🎯 Objectives
-Design a small-scale branch network using Cisco devices
-Separate departments using VLANs
-Provide wireless access for users
-Enable automatic IP addressing using DHCP
-Allow communication between different VLANs
-🖧 Network Design Details
-🔹 Devices Used
-1 Cisco Router
-1 Cisco Switch
-Wireless Access Points / Wireless Router
-End devices (PCs & Laptops)
-🔹 VLAN Structure
-VLAN 10 → Admin / IT
-VLAN 20 → Finance / HR
-VLAN 30 → Customer Service / Reception
-🔹 IP Addressing
-Base Network: 192.168.1.0/24
-Subnetted for each VLAN
-DHCP configured for automatic IP assignment
+## 🏢 Scenario & Objectives
+XYZ Company requires an independent network for its new Bonalbo location. The infrastructure must support three distinct departments while maintaining centralized management.
+
+**Key Objectives:**
+* **Segmentation:** Group users logically to minimize broadcast domains.
+* **Automation:** Implement DHCP to eliminate manual IP configuration.
+* **Connectivity:** Enable Inter-VLAN routing for cross-departmental resource sharing.
+* **Mobility:** Provide integrated Wireless LAN (WLAN) access.
+
+---
+
+## 🛠️ Technical Architecture
+
+### 🖧 Logical Topology
+The network utilizes a **Router-on-a-Stick** configuration. A single physical link between the Switch and Router is partitioned into logical sub-interfaces to act as the default gateway for each VLAN.
+
+### 🔹 Network Segmentation Table
+| Department | VLAN ID | Subnet | Gateway |
+| :--- | :---: | :--- | :--- |
+| **Admin / IT** | 10 | `192.168.1.0/26` | `192.168.1.1` |
+| **Finance / HR** | 20 | `192.168.1.64/26` | `192.168.1.65` |
+| **CS / Reception** | 30 | `192.168.1.128/26` | `192.168.1.129` |
+| **Management (Native)** | 99 | `192.168.1.192/26` | `192.168.1.193` |
+
+---
+
+### 1. Inter-VLAN Routing (Sub-Interfaces)
+
 📶 Key Features Implemented
 
-✔ VLAN segmentation for department isolation
-✔ Inter-VLAN routing using router-on-a-stick
-✔ DHCP for automatic IP allocation
-✔ Wireless network connectivity for each department
-✔ Full internal communication between VLANs
+✅ VLAN Segmentation: Enhanced security by isolating department traffic.
 
-⚙️ Technologies Used
-Cisco Packet Tracer
-VLAN Configuration
-DHCP Server Configuration
-Inter-VLAN Routing
-Wireless LAN Setup
-📸 Project Evidence
+✅ Router-on-a-Stick: Efficient routing using minimal physical hardware.
 
-Screenshots included:
+✅ Dynamic Addressing: DHCP pools configured for all subnets.
 
-Network topology diagram
-VLAN configuration
-DHCP pool setup
-Wireless configuration
-Ping test results (connectivity verification)
+✅ Wireless Integration: Seamless Wi-Fi connectivity for mobile end-devices.
+
+✅ ICMP Verification: Validated end-to-end connectivity across the entire branch.
+
 ✅ Outcome
-
-All departments are successfully segmented using VLANs while maintaining seamless communication across the network. Devices automatically receive IP addresses and can communicate across VLANs efficiently.
+The Bonalbo Branch network is fully operational. All departments receive automated IP configurations, and cross-VLAN communication is successful. The design is highly scalable, allowing the company to add more users or departments with minimal configuration changes.
 
 👨‍💻 Author
-
-Hiru Ranasinghe
-Undergraduate – Computer Networks
-NSBM University
+Hiru Ranasinghe Undergraduate – Computer Networks NSBM Green University
